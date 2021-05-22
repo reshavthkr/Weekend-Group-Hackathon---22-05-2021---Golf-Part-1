@@ -31,7 +31,7 @@ class App extends Component {
         
             window.addEventListener('keydown', (event) => {
                 console.log(event)
-                if(event.key==='ArrowRight' || event.keyCode === 39){
+                if(event.key==='ArrowRight' || event.keyCode == 39){
                     console.log(true)
                     this.setState({
                         posi : this.state.posi+5,
