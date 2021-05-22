@@ -9,7 +9,7 @@ class App extends Component {
             renderBall: false,
             posi : 0,
             check:false,
-            ballPosition: { left: `0px` }
+            ballPosition: { left: "0px" }
         };
         this.renderChoice = this.renderBallOrButton.bind(this)
         this.buttonClickHandler = this.buttonClickHandler.bind(this)
@@ -30,8 +30,8 @@ class App extends Component {
     componentDidMount() {
         
             window.addEventListener('keydown', (event) => {
-                // console.log(event)
-                if(event.key==='ArrowRight'){
+                console.log(event)
+                if(event.key==='ArrowRight' || event.keyCode === 39){
                     console.log(true)
                     this.setState({
                         posi : this.state.posi+5,
@@ -39,9 +39,6 @@ class App extends Component {
                     })
                 }
               });
-            
-        
-    //   console.log(this.state.posi)
     }
 
     render() {
