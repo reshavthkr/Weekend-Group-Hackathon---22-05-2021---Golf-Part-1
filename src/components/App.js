@@ -29,7 +29,7 @@ class App extends Component {
     // bind ArrowRight keydown event
     componentDidMount() {
         
-            window.addEventListener('keydown', (event) => {
+            documnet.addEventListener('keydown', (event) => {
                 console.log(event)
                 if( event.keyCode == 39){
 //                     console.log(true)
