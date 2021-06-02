@@ -7,7 +7,7 @@ class App extends Component {
         super(props)
         this.state = {
             renderBall: false,
-            posi : 0,
+            posi : 5,
             check:false,
             ballPosition: { left: "0px" }
         };
@@ -46,12 +46,13 @@ class App extends Component {
 
             document.addEventListener('keydown', (event) => {
                 console.log(event)
-                if(event.key === "ArrowRight"){
+                if(event.key === "ArrowRight"&& event.keyCode == 39){
                     console.log(true)
-                    this.setState({
-                        posi : this.state.posi+5,
+                    this.setState((prevState) => ({
+                        posi: prevState.posi + 5,
                         ballPosition : {left: this.state.posi+'px'}
-                    })
+                      }))
+                    
                 }
             });
     }
