@@ -51,7 +51,7 @@ class App extends Component {
                     this.setState((prevState) => ({
                         posi: prevState.posi + 5,
                         ballPosition : {left: this.state.posi+'px'}
-                      }))
+                    }))
                     
                 }
             });
